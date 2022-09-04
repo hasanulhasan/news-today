@@ -21,7 +21,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto me-2 mb-lg-0 "></ul>
           <button class="btn btn-outline-success me-2 fs-3 fw-bold" type="submit">News</button>
-          <button class="btn btn-outline-success fs-3 fw-bold" type="submit">Blog</button>
+          <button id="blogBtn" class="btn btn-outline-success fs-3 fw-bold" type="submit">Blog</button>
         </div>
       </div>
     </nav>
@@ -34,22 +34,51 @@
       </ol>
     </div>
   </section>
+  <!-- spinner -->
+  <div id="loader" class="d-flex justify-content-center align-items-center d-none">
+    <div class="spinner-border text-success" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+  <!-- news information -->
+  <div class="container">
+    <h1 id="newsInfo"></h1>
+  </div>
 
   <!-- news showing section -->
   <section id="news-div" class="container">
-    <!-- <div class="row shadow-lg">
-      <div class="col-4">
-        <img class="img-fluid p-1" src="juka.jpg" alt="">
-      </div>
-      <div class="border-1 bg-success p-3 col-8">
-        <h1 class="pb-3">News Title</h1>
-        <img src="juka.jpg" alt="" height="40px" width="40px">
-        <h5>Reporter Jacob jack</h5>
-        <p class="pt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, dicta earum. Perspiciatis dicta nam numquam et, sed voluptas ab rerum nulla, est ex expedita, possimus magni molestias! Aliquam, ex at.</p>
-      </div>
-    </div> -->
+   
   </section>
   <!-- news showing section end-->
+  <!-- blog section start-->
+  <section id="blog" class="container d-none">
+    <div>
+      <h1>1 - Differences between var, let, and const</h1>
+      <h2>Var</h2> 
+      </p>1-The scope of a var variable is functional scope.<br>
+        2-It can be updated and re-declared into the scope.</p>
+      <h2>Let</h2>
+        <p>1-It can be updated but cannot be re-declared into the scope.<br>
+      2-It can be updated but cannot be re-declared into the scope.</p>
+      <h2>const</h2>
+      <p>1-The scope of a const variable is block scope.<br>
+      2-It cannot be updated or re-declared into the scope.</p>
+    </div>
+    <div>
+      <h1>2 - Differences between map() and foreEach()</h1>
+      <h2>map()</h2> 
+      </p>The map method receives a function as a parameter. Then it applies it on each element and returns an entirely new array populated with the results of calling the provided function.This means that it returns a new array that contains an image of each element of the array. It will always return the same number of items.</p>
+      <h2>foreEach()</h2>
+      <p>Like map , the forEach() method receives a function as an argument and executes it once for each array element. However, instead of returning a new array like map, it returns undefined.</p>
+    </div>
+    <div>
+      <h1>3 - Template String</h1>
+      <p>
+        Template strings are a powerful feature of modern JavaScript released in ES6. It lets us insert/interpolate variables and expressions into strings without needing to concatenate like in older versions of JavaScript. It allows us to create strings that are complex and contain dynamic elements. Another great thing that comes with template strings are tags. Tags are functions that take a string and the decomposed parts of the string as parameters and are great for converting strings to different entities.The syntax for creating template strings is by using backticks to delimit them.
+      </p>
+    </div>
+  </section>
+  <!-- blog section start-->
 
 
 
@@ -63,13 +92,32 @@
 
 
 
-
+<!-- modal section -->
+<section>
+  <!-- Modal -->
+      <div class="modal fade" id="newsDetailsModal" tabindex="-1" aria-labelledby="newsDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="newsDetailsModalLabel"></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="modal-body" class="modal-body">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Modal end -->
 
 
   
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-  <script src="test.js"></script>
-  <script src="test2.js"></script>
+  <script src="main.js"></script>
+  <script src="category.js"></script>
 </body>
 </html>
